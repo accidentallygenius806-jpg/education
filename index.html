@@ -1,52 +1,321 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Education Hub</title>
-  <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f4f4f4; color: #333; }
-    header { background: #1e1e1e; color: #fff; padding: 40px 20px; text-align: center; }
-    header h1 { margin: 0; font-size: 2.5rem; }
-    header p { font-size: 1.2rem; }
-    button { padding: 10px 20px; font-size: 1rem; border: none; background: #0070f3; color: #fff; border-radius: 5px; cursor: pointer; }
-    main { max-width: 1200px; margin: auto; padding: 20px; }
-    .program, .testimonial { background: #fff; padding: 20px; margin: 20px 0; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-    h2 { color: #0070f3; }
-    footer { background: #1e1e1e; color: #fff; text-align: center; padding: 20px; margin-top: 20px; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Development Platform</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2c6bed;
+            --secondary: #f8f9fa;
+            --dark: #212529;
+            --light: #f8f9fa;
+            --success: #198754;
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1506784983877-45594efa4cbe?ixlib=rb-4.0.3') no-repeat center center/cover;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        
+        .testimonial-card {
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .cta-section {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .navbar {
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .btn-primary {
+            background-color: var(--primary);
+            border-color: var(--primary);
+            padding: 0.75rem 1.5rem;
+            font-weight: 600;
+        }
+        
+        .stats-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--primary);
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>Education Hub</h1>
-    <p>Learn, Train, and Grow with Our Expert Programs</p>
-    <button>Enroll Now</button>
-  </header>
-  <main>
-    <section class="program">
-      <h2>Sales Engineering Program</h2>
-      <p>Master the art of technical sales with hands-on training and real-world projects.</p>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">
+                <i class="fas fa-graduation-cap me-2"></i>CareerBoost
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Features</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Success Stories</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                </ul>
+                <div class="ms-lg-3 mt-3 mt-lg-0">
+                    <button class="btn btn-outline-primary me-2">Sign In</button>
+                    <button class="btn btn-primary">Get Started</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7">
+                    <h1 class="display-3 fw-bold mb-4">Launch Your Tech Career in 90 Days</h1>
+                    <p class="lead mb-5">Join thousands who have transformed their careers with our proven approach to job placement in tech.</p>
+                    <div class="d-flex flex-wrap gap-2">
+                        <button class="btn btn-primary btn-lg">Start Free Trial</button>
+                        <button class="btn btn-outline-light btn-lg"><i class="fas fa-play-circle me-2"></i>Watch Demo</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-    <section class="program">
-      <h2>Coaching & Mentorship</h2>
-      <p>Get personal coaching from industry experts to boost your career growth.</p>
+
+    <!-- Stats Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-3 col-6 mb-4 mb-md-0">
+                    <div class="stats-number">92%</div>
+                    <p>Job Placement Rate</p>
+                </div>
+                <div class="col-md-3 col-6 mb-4 mb-md-0">
+                    <div class="stats-number">10K+</div>
+                    <p>Careers Launched</p>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stats-number">4.9/5</div>
+                    <p>Student Rating</p>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stats-number">3x</div>
+                    <p>Faster Hiring Time</p>
+                </div>
+            </div>
+        </div>
     </section>
-    <section class="testimonial">
-      <h2>What Our Students Say</h2>
-      <p>"The programs at Education Hub helped me land my dream job!" – Student A</p>
+
+    <!-- Features Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">How We Accelerate Your Career</h2>
+                <p class="lead text-muted">Our proven method gets results</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="text-center">
+                        <div class="feature-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h4>Project-Based Learning</h4>
+                        <p>Gain practical experience building real-world projects that impress employers.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="text-center">
+                        <div class="feature-icon">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <h4>Career Coaching</h4>
+                        <p>1-on-1 guidance from industry experts who help you navigate the job market.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="text-center">
+                        <div class="feature-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h4>Employer Connections</h4>
+                        <p>Direct introduction to our network of hiring partners seeking talent.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-    <section class="program">
-      <h2>Upcoming Courses</h2>
-      <ul>
-        <li>Advanced Sales Techniques</li>
-        <li>AI & Automation in Sales</li>
-        <li>Professional Communication Skills</li>
-      </ul>
+
+    <!-- Success Stories -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Success Stories</h2>
+                <p class="lead text-muted">Hear from our graduates</p>
+            </div>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card testi   monial-card h-100">
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                            </div>
+                            <p class="card-text">"After struggling to break into tech, CareerBoost gave me the skills and confidence to land my dream job as a UX designer."</p>
+                        </div>
+                        <div class="card-footer bg-white">
+                            <div class="d-flex align-items-center">
+                                <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Sarah" class="rounded-circle me-3" width="50">
+                                <div>
+                                    <strong>Sarah M.</strong>
+                                    <p class="mb-0 text-muted">UX Designer @ TechVision</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card testimonial-card h-100">
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                            </div>
+                            <p class="card-text">"The career coaching was invaluable. I went from unsure about my future to receiving multiple job offers in just 3 months."</p>
+                        </div>
+                        <div class="card-footer bg-white">
+                            <div class="d-flex align-items-center">
+                                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="James" class="rounded-circle me-3" width="50">
+                                <div>
+                                    <strong>James K.</strong>
+                                    <p class="mb-0 text-muted">Software Engineer @ DataCore</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card testimonial-card h-100">
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                            </div>
+                            <p class="card-text">"The project-based approach meant I had actual work to show in interviews, which made all the difference in getting hired."</p>
+                        </div>
+                        <div class="card-footer bg-white">
+                            <div class="d-flex align-items-center">
+                                <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Priya" class="rounded-circle me-3" width="50">
+                                <div>
+                                    <strong>Priya V.</strong>
+                                    <p class="mb-0 text-muted">Data Analyst @ CloudSphere</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-  </main>
-  <footer>
-    <p>Contact us: info@education.work.gd</p>
-    <p>&copy; 2025 Education Hub</p>
-  </footer>
+
+    <!-- CTA Section -->
+    <section class="cta-section py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8 mb-4 mb-lg-0">
+                    <h2 class="fw-bold mb-3">Ready to transform your career?</h2>
+                    <p class="lead mb-0">Join our next cohort and start your journey to a high-paying tech job.</p>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <button class="btn btn-light btn-lg">Apply Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h5 class="fw-bold mb-4">CareerBoost</h5>
+                    <p>Helping aspiring professionals launch tech careers since 2018.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                    <h5 class="fw-bold mb-4">Programs</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">UX Design</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Data Science</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Web Development</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Digital Marketing</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                    <h5 class="fw-bold mb-4">Company</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">About Us</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Success Stories</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Blog</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <h5 class="fw-bold mb-4">Contact Us</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-envelope me-2"></i> support@careerboost.com</li>
+                        <li class="mb-2"><i class="fas fa-phone me-2"></i> (555) 123-4567</li>
+                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> San Francisco, CA</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">© 2025 CareerBoost. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-white text-decoration-none me-3">Privacy Policy</a>
+                    <a href="#" class="text-white text-decoration-none">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
